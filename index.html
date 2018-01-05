@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <title>Simple To-Do App | Track Your Doing</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body ng-app="App">
+    <h1 class="main-heading">A simple To-Do App</h1>
+    <h2 class="second-heading">Track Your Doings</h2>
+    <div ng-controller="todoCtrl">
+        <ul>
+            <li class="single-todo" ng-repeat="todo in list">{{todo}}&nbsp;&nbsp; <span class="del-icon" ng-click="removeItem($index)">&times;</span></li>
+        </ul>
+        <div class="centering-input">
+            <input placeholder="Add Todo Here..." class="todo-input" type="text" name="todo" ng-focus="clearOutError()" ng-model="newTodo">
+            <button class="todo-btn" ng-click="addItem()">Add</button>
+            <div class="error" ng-bind="showError"></div>
+        </div>
+        
+    </div>
+    <footer>
+        <p class="footer-personal">Designed &amp; coded by <a href="https://shahzaibkhalid.github.io" target="_blank">Shahzaib Khalid</a></p>
+        <p class="footer-code-license">Wikipedia Viewer is licensed under the
+        <a href="https://github.com/shahzaibkhalid/simple-todo/blob/master/LICENSE.txt" target="_blank"> MIT License.</a>
+        </p>
+    </footer>
+</body>
+<script src="./node_modules/angular/angular.js"></script>
+<script src="./app.js"></script>
+</html>

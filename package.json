@@ -1,0 +1,12 @@
+{
+  "name": "simple-todo",
+  "version": "1.0.0",
+  "description": "A simple to-do application built using AngularJS.",
+  "main": "app.js",
+  "keywords": [
+    "AngularJS",
+    "TODO"
+  ],
+  "author": "Shahzaib Khalid",
+  "license": "MIT"
+}
